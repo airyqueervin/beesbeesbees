@@ -1,7 +1,7 @@
-var Grub = function(age, color, food) {
-  this.age = age;
-  this.color = color;
-  this.food = food;
+var Grub = function() {
+  this.age = 0;
+  this.color = 'pink';
+  this.food = 'jelly';
 };
 
 Grub.prototype.eat = function() {
