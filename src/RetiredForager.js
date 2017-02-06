@@ -1,13 +1,23 @@
-var RetiredForagerBee = function(age, color, food, job, canFly) {
-  ForagerBee.call(this, age, color, food, job, canFly)
-
-};
-
-RetiredForagerBee.prototype.forage = function() {
-  return "I am too old, let me play cards instead";
+var RetiredForagerBee = function() {
+  ForagerBee.call(this);
+  this.age = 40;
+  this.job = 'gamble';
+  this.color = 'grey';
+  this.canFly = false;
 };
 
 RetiredForagerBee.prototype = Object.create(ForagerBee.prototype);
+RetiredForagerBee.prototype = Object.create(Grub.prototype);
 RetiredForagerBee.prototype.constructor = RetiredForagerBee;
+
+RetiredForagerBee.prototype.forage = function() {
+  return 'I am too old, let me play cards instead';
+};
+
+RetiredForagerBee.prototype.gamble = function(treasure) {
+  this.treasureChest.push(treasure);
+}
+
+
 
 // var oldBuzz = new RetiredForagerBee(40, grey, jelly, 'gamble', false)
